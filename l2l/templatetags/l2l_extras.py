@@ -1,10 +1,9 @@
 from datetime import datetime
 from django import template
-from datetime import datetime
 
 register = template.Library()
 
-# Your filter should print the results in the following format: "%Y-%m-%d %H:%M:%S".
+# filter should print the results in the following format: "%Y-%m-%d %H:%M:%S".
 def format_datetime(date_param):
   if type(date_param) == str:
     return format_str(date_param)
@@ -30,5 +29,6 @@ def format_datetime_obj(datetime_object):
 # if all else fails
 def fallback_date():
   return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 
 register.filter('format_datetime', format_datetime)
