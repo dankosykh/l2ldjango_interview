@@ -5,7 +5,7 @@ import re
 from datetime import datetime
 
 example_date_str = '2021-05-14T00:24:58'
-example_date_datetime = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+example_date_datetime = datetime.now()
 example_error_1 = 'Not a date'
 example_error_2 = 16
 
